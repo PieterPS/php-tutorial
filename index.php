@@ -1,27 +1,21 @@
 <?php 
 
-  // Continue & break
+  // functions
   // =====================================
 
-  $products = [
-    ['name' => 'shiny star', 'price' => 20],
-    ['name' => 'green shell', 'price' => 10],
-    ['name' => 'red shell', 'price' => 15],
-    ['name' => 'gold coin', 'price' => 5],
-    ['name' => 'lightning bolt', 'price' => 40],
-    ['name' => 'banana skin', 'price' => 2]
-  ];
-
-  foreach ($products as $product) {
-    if($product['name'] === 'lightning bolt') {
-    break; // break out of loop - stop at this statement
-    }
-
-    if($product['price'] > 15) {
-      continue; // skip the rest of the code from this point and conitnue with the next value in the loop
-    }
-    echo $product['name'] . '<br />';
+  function sayHello($name = 'shaun', $time = 'morning') {
+    echo "good $time $name";
   }
+
+  sayHello('ryu', 'evening');
+
+  function formatProduct($product) {
+    // echo "{$product['name']} costs R{$product['price']} to buy <br />";
+    return "{$product['name']} costs R{$product['price']} to buy <br />";
+  }
+
+  // $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
+  // echo $formatted;
 
 ?>
 
