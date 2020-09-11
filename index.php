@@ -1,21 +1,39 @@
 <?php 
 
-  // functions
+  // local variable
   // =====================================
 
-  function sayHello($name = 'shaun', $time = 'morning') {
-    echo "good $time $name";
+  // function myFunc (localVariable){
+  //   $variable = localVariable;
+  // }
+
+  // global variable
+  // =====================================
+  
+  $name = 'mario';
+
+  // function myFuncTwo () {
+  //   global $name;
+  //   $name = 'yoshi';
+  // }
+
+  // myFuncTwo();
+  // echo $name;
+
+  // use global var as argument, it becomes local var
+  function sayBye($name) {
+    $name = 'wario';
+    echo "bye $name";
   }
 
-  sayHello('ryu', 'evening');
-
-  function formatProduct($product) {
-    // echo "{$product['name']} costs R{$product['price']} to buy <br />";
-    return "{$product['name']} costs R{$product['price']} to buy <br />";
+  // use global var as argument and keep it's global value to update etc.
+  function sayByeTwo(&$name) {
+    $name = 'wario';
+    echo "bye $name";
   }
 
-  // $formatted = formatProduct(['name' => 'gold star', 'price' => 20]);
-  // echo $formatted;
+  sayByeTwo($name);
+  echo $name;
 
 ?>
 
