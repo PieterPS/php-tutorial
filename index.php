@@ -1,39 +1,20 @@
 <?php 
 
-  // local variable
-  // =====================================
+  // include - carry on with rest of php after errer
+  // ===================================================================
 
-  // function myFunc (localVariable){
-  //   $variable = localVariable;
-  // }
+  include('ninjas.php');
+  include 'ninjas.php';
 
-  // global variable
-  // =====================================
-  
-  $name = 'mario';
+  echo 'end of php';
 
-  // function myFuncTwo () {
-  //   global $name;
-  //   $name = 'yoshi';
-  // }
+  // require - fatal error stops the code
+  // ===================================================================
 
-  // myFuncTwo();
-  // echo $name;
+  require('ninjas.php');
+  require 'ninjas.php';
 
-  // use global var as argument, it becomes local var
-  function sayBye($name) {
-    $name = 'wario';
-    echo "bye $name";
-  }
-
-  // use global var as argument and keep it's global value to update etc.
-  function sayByeTwo(&$name) {
-    $name = 'wario';
-    echo "bye $name";
-  }
-
-  sayByeTwo($name);
-  echo $name;
+  echo 'end of php';
 
 ?>
 
@@ -45,6 +26,8 @@
   <title>My first PHP file</title>
 </head>
 <body>
+
+<?php include('content.php') ?>
 
 </body>
 </html>
