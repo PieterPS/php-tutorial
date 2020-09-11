@@ -1,40 +1,46 @@
 <?php 
 
-  $radius = 25; // Intiger
-  $pi = 3.14; // Float
+  // index arrays (like js arrays)
+  $peopleOne = ['Shaun', 'Crystal', 'Ryu'];
+  // echo $peopleOne[1];
 
-  // basic - *, /, +, -, **
+  $peopleTwo = array('ken', 'chun-li');
+  // echo $peopleTwo[1];
 
-  // echo $pi * $radius **2;
+  $ages = [20, 30, 40, 50];
+  // print_r($ages);
 
-  // order of operation (B I D M A S)
+  $ages[1] = 25;
+  // print_r($ages)
 
-  // echo 2 * (4 + 9) / 3;
+  $ages[] = 60;
+  // print_r($ages);
 
-  // increment & decrement operators
+  array_push($ages, 70);
+  // print_r($ages);
 
-  // echo $radius++;
-  // echo $radius;
-  // echo $radius--;
-  // echo $radius;
+  // echo count($ages);
 
-  // shorthand operators
+  $peopleThree = array_merge($peopleOne, $peopleTwo);
+  // print_r($peopleThree);
 
-  $age = 20;
+  // associative arrays (key & value pairs - almost like js objects)
+  $ninjasOne = ['shaun'=>'black', 'mario'=>'orange', 'luigi'=>'brown'];
+  // echo $ninjasOne['mario'];
+  // print_r($ninjasOne);
 
-  // $age += 10;
-  // echo $age;
-  // $age -= 20;
-  // echo $age;
-  // $age *= 20;
-  // echo $age;
+  $ninjasTwo = array('bowser'=>'green', 'peach'=>'yellow');
+  // print_r($ninjasTwo);
 
-  // number functions
-  
-  // echo floor($pi);
-  // echo ceil($pi);
+  $ninjasTwo['toad'] = 'pink';
+  // print_r($ninjasTwo);
+  $ninjasTwo['peach'] = 'pink';
+  // print_r($ninjasTwo);
 
-  echo pi();
+  // echo count($ninjasOne);
+
+  $ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+  print_r($ninjasThree);
 
 ?>
 
