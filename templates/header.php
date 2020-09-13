@@ -1,14 +1,11 @@
 <?php 
   session_start();
 
-  // $_SESSION['name'] = 'yoshi';
-
   if ($_SERVER['QUERY_STRING'] == 'noname') {
     unset($_SESSION['name']);
-    // session_unset(); - clear all
   }
 
-  $name = $_SESSION['name'];
+  $name = $_SESSION['name'] ?? 'Guest';
 ?>
 
 <head>
